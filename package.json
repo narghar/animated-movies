@@ -1,0 +1,18 @@
+{
+  "name": "animated-movies",
+  "description": "Animated Movies search in TMDb",
+  "version": "1.0.0",
+  "scripts": {
+    "compile:sass": "node-sass --watch public/scss/main.scss public/css/style.css -o"
+  },
+  "author": "Igor Wysocki",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
