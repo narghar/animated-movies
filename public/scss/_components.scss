@@ -1,0 +1,15 @@
+.movies {
+  background-color: var(--color-gray-light);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__item {
+    padding: 2rem;
+  }
+  &__title {
+    color: #fff;
+  }
+  &__poster {
+    border-radius: 2%;
+  }
+}

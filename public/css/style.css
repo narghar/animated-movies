@@ -1,6 +1,7 @@
 :root {
   --color-primary: #5299b8;
   --color-primary-light: #92bfd3;
+  --color-primary-dark: #3e748b;
   --color-gray-dark: #333;
   --color-gray-light: #999; }
 
@@ -21,3 +22,15 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-gray-dark);
   background-color: var(--color-primary-light); }
+
+.movies {
+  background-color: var(--color-gray-light);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .movies__item {
+    padding: 2rem; }
+  .movies__title {
+    color: #fff; }
+  .movies__poster {
+    border-radius: 2%; }
