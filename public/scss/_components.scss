@@ -1,15 +1,41 @@
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  overflow: hidden;
+
+  &__content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+  }
+}
+
+
 .movies {
-  background-color: var(--color-gray-light);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  padding: 0 2rem;
+  background: #fbecff;
+
   &__item {
     padding: 2rem;
+    display: block;
+    width: 20%;
+    //TODO: phone media query width: 50%;
   }
   &__title {
     color: #fff;
+    text-decoration: none;
   }
   &__poster {
     border-radius: 2%;
+    width: 100%;
+    height: auto;
   }
 }

@@ -21,16 +21,53 @@ html {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-gray-dark);
-  background-color: var(--color-primary-light); }
+  background-color: var(--color-primary-dark);
+  padding: 2rem;
+  background-image: linear-gradient(#7a3e93, #CE8CA5); }
+
+.header {
+  position: relative;
+  height: 27rem; }
+
+.header-content {
+  background: #2d203e;
+  height: 4rem;
+  color: #fff; }
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .movies {
-  background-color: var(--color-gray-light);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  padding: 0 2rem;
+  background: #fbecff; }
   .movies__item {
-    padding: 2rem; }
+    padding: 2rem;
+    display: block;
+    width: 20%; }
   .movies__title {
-    color: #fff; }
+    color: #fff;
+    text-decoration: none; }
   .movies__poster {
-    border-radius: 2%; }
+    border-radius: 2%;
+    width: 100%;
+    height: auto; }

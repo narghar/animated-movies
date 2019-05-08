@@ -27,5 +27,7 @@ html {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-gray-dark);
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary-dark);
+  padding: 2rem;
+  background-image: linear-gradient(#7a3e93, #CE8CA5);
 }
