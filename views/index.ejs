@@ -1,13 +1,27 @@
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container">
+        <header class="header">
+          <div class="header-content">
+            <h1>BAZA BAJEK</h1>
+          </div>
+            <div class="bg-video">
+              <video class="bg-video__content" autoplay muted >
+                <source src="img/video.webm" type="video/webm">
+                 Your browser is not supported!
+              </video>
+            </div>
+          </header>
+      <div class="movies">
+        <% movies.forEach(function(movie){%>
 
-    <div class="movies">
-    <% movies.forEach(function(movie){%>
+            <figure class="movies__item">
+              <a href="movies/<%= movie.id %>">
+              <img class="movies__poster" src="<%= movie.image %>">
+              <figcaption class="movies__title"><%= movie.name %></figcaption>
+              </a>
+            </figure>
 
-        <figure class="movies__item">
-          <h1 class="movies__title"><%= movie.name %></h1>
-          <img class="movies__poster" src="<%= movie.image %>">
-        </figure>
-      <% });%>
+            <% });%>
+      </div>
     </div>
+
