@@ -1,3 +1,111 @@
+///// LOGO //////
+
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin-left: 2rem;
+  transition: all .2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+///// SEARCH //////
+.search {
+    flex: 0 0 40%;
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--color-primary);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:focus {
+            outline: none;
+            width: 100%;
+        }
+        &::-webkit-input-placeholder {
+            color: var(--color-secondary);
+      }
+
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
+    }
+
+    &__button {
+        border: none;
+        background-color: var(--color-primary);
+
+        &:focus {
+            outline: none;
+        }
+
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-secondary);
+    }
+}
+
+///// NAVIGATION //////
+.header-nav {
+  display: flex;
+  list-style: none;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 2rem;
+  }
+
+  &__item {
+    position: relative;
+  }
+  &__item--active {
+
+  }
+
+  &__favicon {
+    height: 3.5rem;
+    width: 3.5rem;
+
+  }
+
+  &__fav-counter {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: #fff;
+  }
+
+}
+
+
+
+///// VIDEO //////
 
 .bg-video {
   position: absolute;
@@ -16,13 +124,13 @@
   }
 }
 
+///// MOVIES LIST //////
 
 .movies {
+  background-color: var(--color-secondary);
   display: flex;
   flex-wrap: wrap;
   padding: 0 2rem;
-  background: #fbecff;
-
   &__item {
     padding: 2rem;
     display: block;
@@ -30,7 +138,6 @@
     //TODO: phone media query width: 50%;
   }
   &__title {
-    color: #fff;
     text-decoration: none;
   }
   &__poster {

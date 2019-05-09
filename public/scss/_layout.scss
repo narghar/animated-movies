@@ -1,12 +1,13 @@
 .header {
   position: relative;
   height: 27rem;
-
 }
 .header-content {
-  background: #2d203e;
-  height: 4rem;
-  color: #fff;
+  height: 4.5rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .container {
   max-width: 120rem;
