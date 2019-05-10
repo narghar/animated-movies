@@ -1,14 +1,16 @@
 
 :root {
-  --font-headers: 'Bangers', cursive;
-  --font-primary: 'Open Sans', sans-serif;
+  --font-headers: 'Righteous', cursive;
+  --font-primary: 'Roboto', sans-serif;
   --color-primary: #7a3e92;
   --color-secondary: #fbecff;
+  --heart: #b34774;
 
 
   --color-grey-dark: #464646;
   --color-grey-light: #cac9c9;
   --line: 1px solid var(--color-grey-light);
+  --shadow: 6px 6px 15px 0px rgba(0,0,0, 0.3);
 }
 
 * {
