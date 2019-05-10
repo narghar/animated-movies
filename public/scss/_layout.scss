@@ -1,20 +1,44 @@
-.header {
+.container::after { //fix to avoid using overflow: hidden on .container
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  border: 1 px solid black;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  height: 27rem;
+  // Do not use overflow: hidden property here!
+  // Fixed navigation will stop working!
 }
 .header-content {
+  border-bottom: var(--line);
+  border-radius: 5px 5px 0 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  align-self: flex-start; // <-- this fix position sticky on flex
   height: 4.5rem;
   background-color: var(--color-secondary);
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.container {
-  max-width: 120rem;
-  margin: 0 auto;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 2px 3px 8px rgba(0,0,0, .3);
 
 }
+.video-wrapper {
+  position: relative;
+  height: 27rem;
+}
+
 

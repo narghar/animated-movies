@@ -1,7 +1,6 @@
 
     <div class="container">
-        <header class="header">
-          <div class="header-content">
+        <header class="header-content">
             <img src="img/logo.png" alt="Baza bajek logo" class="logo">
             <form class="search">
               <input type="text" name="" id="" class="search__input" placeholder="Szukaj bajek wg tytułu">
@@ -13,15 +12,15 @@
             </form>
             <nav class="header-bar-nav">
               <ul class="header-nav">
-                <li class="header-nav__item"><a href="#">Popularne</a></li>
-                <li class="header-nav__item"><a href="#">Ranking</a></li>
+                <li class="header-nav__item"><a href="#" class="header-nav__link">Popularne</a></li>
+                <li class="header-nav__item"><a href="#" class="header-nav__link">Ranking</a></li>
                 <li class="header-nav__item">
                     <svg class="header-nav__favicon">
                         <use xlink:href="img/icons.svg#icon-heart"></use>
                     </svg>
-                    <span class="header-nav__fav-counter">0</span>
+                    <span class="header-nav__fav-counter">49</span>
                 </li>
-                <li class="header-nav__item--active"><a href="#">Zaloguj</a></li>
+                <li class="header-nav__item--action"><a href="#" class="header-nav__link--action">Zaloguj</a></li>
                 <!-- TODO:
                 if user succes login,
                 replace Sign in link
@@ -30,14 +29,15 @@
               -->
               </ul>
             </nav>
-          </div>
+          </header>
+        <div class="video-wrapper">
             <div class="bg-video">
               <video class="bg-video__content" muted >
                 <source src="img/video.webm" type="video/webm">
                  Your browser is not supported!
               </video>
             </div>
-          </header>
+          </div>
       <div class="movies">
         <% movies.forEach(function(movie){%>
 
@@ -50,5 +50,8 @@
 
             <% });%>
       </div>
+      <footer>
+
+      </footer>
     </div>
 
