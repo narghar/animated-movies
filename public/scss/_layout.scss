@@ -34,6 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 1000;
 
 }
 .video-wrapper {
@@ -41,4 +42,16 @@
   height: 27rem;
 }
 
+.main-view {
+  background-color: var(--color-secondary);
+  border-radius: 0 0 5px 5px;
+}
 
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 8rem;
+  padding: 1rem 0;
+}

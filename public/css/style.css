@@ -3,9 +3,10 @@
   --font-primary: 'Roboto', sans-serif;
   --color-primary: #7a3e92;
   --color-secondary: #fbecff;
-  --heart: #b34774;
-  --color-grey-dark: #464646;
-  --color-grey-light: #cac9c9;
+  --color-heart: #b34774;
+  --color-powered:  #01d277;
+  --color-grey-dark: #5d5d5d;
+  --color-grey-light: #9b9b9b;
   --line: 1px solid var(--color-grey-light);
   --shadow: 6px 6px 15px 0px rgba(0,0,0, 0.3); }
 
@@ -26,7 +27,7 @@ body {
   font-family: var(--font-primary);
   font-size: 1.6rem;
   line-height: 1.4;
-  color: var(--color-gray-dark);
+  color: var(--color-grey-dark);
   padding: 2rem;
   background-color: var(--color-primary);
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ce8ca5' fill-opacity='0.32' fill-rule='evenodd'/%3E%3C/svg%3E"); }
@@ -64,11 +65,24 @@ body {
   background-color: var(--color-secondary);
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 1000; }
 
 .video-wrapper {
   position: relative;
   height: 27rem; }
+
+.main-view {
+  background-color: var(--color-secondary);
+  border-radius: 0 0 5px 5px; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 8rem;
+  padding: 1rem 0; }
 
 .logo {
   height: 3.5rem;
@@ -136,7 +150,7 @@ body {
     margin-top: 5px;
     height: 3.5rem;
     width: 3.5rem;
-    fill: var(--heart); }
+    fill: var(--color-heart); }
   .header-nav__fav-counter {
     font-size: 1.3rem;
     position: absolute;
@@ -170,22 +184,50 @@ body {
         left: 50%;
         transform: translate(-50%, -50%); } }
 
+.movies-category {
+  font-family: var(--font-headers);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 0.5rem 0 0.5rem 4rem;
+  flex: 0 0 100%;
+  margin-top: 2rem;
+  text-transform: uppercase; }
+
 .movies {
-  background-color: var(--color-secondary);
   display: flex;
   flex-wrap: wrap;
-  padding: 0 2rem;
-  border-radius: 0 0 5px 5px; }
+  padding: 0 2rem 2rem 2rem; }
   .movies__item {
     padding: 2rem;
     display: block;
     width: 20%; }
+  .movies__item-link:link, .movies__item-link:visited {
+    color: var(--color-grey-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .5s; }
+  .movies__item-link:hover {
+    color: var(--color-grey-dark); }
+  .movies__item-link:hover .movies__poster {
+    transform: scale(1); }
   .movies__title {
-    text-decoration: none; }
+    font-size: 1.5rem; }
   .movies__poster {
     border-radius: 3px;
     width: 100%;
     height: auto;
     -webkit-box-shadow: var(--shadow);
     -moz-box-shadow: var(--shadow);
-    box-shadow: var(--shadow); }
+    box-shadow: var(--shadow);
+    transform: scale(0.95);
+    transition: all .5s; }
+
+.copyright {
+  color: var(--color-secondary); }
+
+.powered {
+  width: 12rem;
+  fill: var(--color-powered); }

@@ -99,7 +99,7 @@
     margin-top: 5px;
     height: 3.5rem;
     width: 3.5rem;
-    fill: var(--heart);
+    fill: var(--color-heart);
   }
 
   &__fav-counter {
@@ -147,28 +147,75 @@
 }
 
 ///// MOVIES LIST //////
+.movies-category {
+
+  font-family: var(--font-headers);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 0.5rem 0 0.5rem 4rem;
+  flex: 0 0 100%;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
 
 .movies {
-  background-color: var(--color-secondary);
   display: flex;
   flex-wrap: wrap;
-  padding: 0 2rem;
-  border-radius: 0 0 5px 5px;
+  padding: 0 2rem 2rem 2rem;
+
   &__item {
     padding: 2rem;
     display: block;
     width: 20%;
     //TODO: phone media query width: 50%;
+
   }
-  &__title {
+
+  &__item-link:link,
+  &__item-link:visited {
+    color: var(--color-grey-light);
     text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .5s;
   }
+  &__item-link:hover {
+    color: var(--color-grey-dark);
+
+  }
+  &__item-link:hover  &__poster {
+    transform: scale(1);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
   &__poster {
     border-radius: 3px;
     width: 100%;
     height: auto;
     -webkit-box-shadow: var(--shadow);
-  -moz-box-shadow: var(--shadow);
-  box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+    transform: scale(0.95);
+    transition: all .5s;
   }
+
+}
+
+///// SOCIAL ICONS //////
+
+
+
+///// COPYRIGHT TEXT //////
+.copyright {
+  color: var(--color-secondary);
+}
+
+.powered {
+  width: 12rem;
+  fill: var(--color-powered);
 }
