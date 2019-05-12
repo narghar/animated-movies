@@ -1,13 +1,13 @@
 <h1 class="movies-category">Najnowsze</h1>
   <div class="movies">
-    <% movies.forEach(function(movie){%>
-    <figure class="movies__item">
-      <a href="movies/<%= movie.id %>" class="movies__item-link">
-        <img class="movies__poster" src="<%= movie.image %>">
-          <figcaption class="movies__title">
-            <%= movie.name %>
-          </figcaption>
-      </a>
-    </figure>
-    <% });%>
-  </div>
+    <% movies.result.forEach(function(movie){%>
+      <figure class="movies__item">
+        <a href="movie/<%= movie.id %>" class="movies__item-link">
+          <img class="movies__poster" src="https://image.tmdb.org/t/p/w300<%= movie.poster_path %>">
+            <figcaption class="movies__title">
+              <%= movie.title %>
+            </figcaption>
+        </a>
+      </figure>
+      <% });%>
+      </div>
