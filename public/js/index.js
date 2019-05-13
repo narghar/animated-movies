@@ -13,7 +13,7 @@ searchButton.addEventListener("click", () => {
   videoElem.play();
 });
 
-document.addEventListener('keypress', function(event) {
+searchForm.addEventListener('keypress', function(event) {
   if (event.keyCode === 13 || event.which === 13) {
       videoElem.play();
     }
