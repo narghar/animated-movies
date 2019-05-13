@@ -1,18 +1,22 @@
 // Controller for all root / routes
-const Search = require('../models/searchModel');
+const Search = require('../models/indexModel');
 
 //SEARCH FOR NEW MOVIES
 const movies = {};
+let dateObj = new Date();
+let releaseYear = dateObj.getFullYear();
+let releasedTillNow = dateObj.getFullYear() + "-" + (dateObj.getMonth() + 1) + "-" + dateObj.getDate();
+
 const controlMovies = async() => {
-  let query = 16;
-  search = new Search(query);
+
+  search = new Search(releaseYear, releasedTillNow);
   try {
     await search.getData();
     movies.result = search.result;
     // console.log(movies.result);
     } catch(err) {
-  console.log('Blad');
-}
+        console.log("Download error");
+  }
 }
 controlMovies();
 
