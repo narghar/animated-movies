@@ -4,9 +4,10 @@
   height: 3.5rem;
   width: 3.5rem;
   margin-left: 2rem;
+  margin-top: 7px;
   transition: all .2s;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
 }
 
@@ -205,6 +206,67 @@
   }
 
 }
+
+///// MOVIE DETAIL //////
+.movie-detail-backdrop {
+  position: relative;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+  }
+
+}
+
+.movie-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+
+
+  &__poster {
+    flex: 0 1 30rem;
+    padding-right: 2rem;
+    //test background-color: black;
+     }
+
+  &__poster-img {
+    max-width:  100%;
+    border-radius: 3px;
+  }
+
+  &__content {
+    background-color: #fbecff;
+    border-radius: 3px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    flex: 0 1 60%;
+    font-size: 1.8rem;
+    opacity: .8;
+    margin-bottom: 5.6px;
+  }
+
+  &__info {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+
+  &-item {
+    flex: 1 1;
+    margin-right: 2rem;
+  }
+  }
+
+}
+
 
 ///// SOCIAL ICONS //////
 

@@ -7,7 +7,10 @@ const indexRouter = require('./indexRouter');
 const movieDetailRouter = require('./movieDetailRouter');
 
 router.use('/', indexRouter);
-router.use('/movie/:movieId', movieDetailRouter);
+router.use('/movie/:movieId', function (req, res, next) {
+  movieId = req.params.movieId;
+  next();
+}, movieDetailRouter);
 
 
 module.exports = router;
