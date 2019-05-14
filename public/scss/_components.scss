@@ -27,17 +27,23 @@
         border: none;
         padding: .5rem 2rem;
         border-radius: 100px;
-        width: 90%;
-        transition: all .2s;
         margin-right: -3.25rem;
+        width: 100%;
 
         &:focus {
             outline: none;
-            width: 100%;
+            background-color: var(--color-primary);
         }
         &::-webkit-input-placeholder {
             color: var(--color-secondary);
-      }
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus
+        {
+          -webkit-text-fill-color: var(--color-secondary);
+          -webkit-box-shadow: 0 0 0px 1000px var(--color-primary) inset;
+        }
 
     }
 
@@ -79,9 +85,17 @@
 
   &__link:link,
   &__link:visited {
+    display: inline-block;
     color: var(--color-primary);
     text-decoration: none;
     letter-spacing: 1px;
+    border-bottom: 1px solid var(--color-secondary);
+    transition: all .3s;
+  }
+
+  &__link:hover {
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-primary);
   }
 
   &__item--action {
@@ -235,12 +249,14 @@
   &__poster {
     flex: 0 1 30rem;
     padding-right: 2rem;
+
     //test background-color: black;
      }
 
   &__poster-img {
     max-width:  100%;
     border-radius: 3px;
+    box-shadow: var(--shadow);
   }
 
   &__content {
@@ -267,6 +283,12 @@
 
 }
 
+.not-found {
+  display: flex;
+  font-size: 1.8rem;
+  justify-content: center;
+
+}
 
 ///// SOCIAL ICONS //////
 
