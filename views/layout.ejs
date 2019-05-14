@@ -13,9 +13,9 @@
 
         <header class="header-content">
             <a href="/"><img src="/img/logo.png" alt="Baza bajek logo" class="logo"></a>
-            <form class="search">
-              <input type="text" name="" id="" class="search__input" placeholder="Szukaj bajek wg tytułu">
-              <button class="search__button">
+            <form class="search" method="POST" action="/search">
+              <input type="text"  name="query" class="search__input" placeholder="Szukaj bajek wg tytułu" pattern="[A-Za-z0-9 ąćęłńóśźżĄĘŁŃÓŚŹŻ]+" minlength="3" title="Możesz używać tylko liter, liczb i spacji!"  required>
+              <button type="submit" class="search__button">
                 <svg class="search__icon">
                   <use xlink:href="/img/icons.svg#icon-search"></use>
                 </svg>
@@ -61,9 +61,10 @@
 
     </div>
     <footer class="footer">
-      <svg class="powered">
-          <use xlink:href="/img/icons.svg#tmdb-logo"></use>
-      </svg>
+        <svg class="powered">
+            <use xlink:href="/img/icons.svg#tmdb-logo"></use>
+        </svg>
+
       <p class="copyright">2019 Made by Igor Wysocki</p>
     </footer>
 
