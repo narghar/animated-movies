@@ -1,5 +1,5 @@
 const axios = require('axios');
-const data = require('../config/data')
+const data = require('../config/data');
 
 class MovieDetail {
   constructor(movieID) {
