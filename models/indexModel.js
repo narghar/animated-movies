@@ -1,7 +1,8 @@
 const axios = require('axios');
 const data = require('../config/data')
 
-class Search {
+
+class Latest {
   constructor(releaseYear, releasedTillNow) {
     this.releaseYear = releaseYear;
     this.releasedTillNow = releasedTillNow;
@@ -16,4 +17,4 @@ class Search {
   }
 }
 
-module.exports = Search;
+module.exports = Latest;

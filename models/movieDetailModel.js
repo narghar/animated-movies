@@ -8,6 +8,7 @@ class MovieDetail {
   async getData() {
     try {
       const response = await axios.get(`https://api.themoviedb.org/3/movie/${this.movieID}?api_key=${data.key}&language=pl-PL`);
+
       this.title =  response.data.title;
       this.description = response.data.overview;
       this.poster = response.data.poster_path;
@@ -15,7 +16,6 @@ class MovieDetail {
       this.releaseDate = response.data.release_date;
       this.genres = response.data.genres;
       this.runtime = response.data.runtime;
-      // console.log(this.result);
     } catch (error) {
       console.error(error);
     }

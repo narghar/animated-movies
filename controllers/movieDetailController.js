@@ -14,7 +14,7 @@ module.exports = {
         await movie.getData();
         return res.render('movieDetail', {title: movieId, movie: movie});
        } catch(err) {
-            // console.log("Download error");
+         console.log("Download error");
       }
 
     }

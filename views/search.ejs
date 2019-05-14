@@ -1,0 +1,39 @@
+
+<% if  (movie.result.length > 0) {%>
+<h1 class="movies-category">Wyniki wyszukiwania</h1>
+<div class="movies">
+  <% movie.result.forEach((movie) =>{%>
+  <figure class="movies__item">
+    <a href="movie/<%= movie.id %>" class="movies__item-link">
+      <img
+        class="movies__poster"
+        src="https://image.tmdb.org/t/p/w342<%= movie.poster_path %>"
+      />
+      <figcaption class="movies__title">
+        <%= movie.title %>
+      </figcaption>
+    </a>
+  </figure>
+  <% });%>
+</div>
+
+<% } else {%>
+
+<h1 class="movies-category">Nic nie znaleziono :(</h1>
+<div class="not-found">
+  <div>
+    <h2>Spróbuj wyszukać:</h2>
+    <ul>
+      <li>Toy Story</li>
+      <li>Lego</li>
+      <li>Epoka Lodowcowa</li>
+      <li>Król Lew</li>
+      <li>Zaplątani</li>
+    </ul>
+  </div>
+  <img src="/img/not-found.jpg">
+
+
+</div>
+
+<% } %>
