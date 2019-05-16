@@ -1,11 +1,11 @@
 
 ## Animation movies database
 
-> Website that allows users to search animated videos and get details from the TMDb movie database.
+> Website that allows users to search animated movies and get details from the TMDb movies database.
 
 > Right now support only polish language.
 
-> This is my Learn to Code project
+> This is my Learn to Code project.
 
 ![Screencast](demo.gif)
 
