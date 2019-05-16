@@ -5,7 +5,7 @@
 > Right now support only polish language.
 > This is my Learn to Code project
 
-![Screencast](https://github.com/narghar/animated-movies/demo.gif)
+![Screencast](demo.gif)
 
 ## Demo
 
