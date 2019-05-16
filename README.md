@@ -19,6 +19,7 @@
    - there is no direct path, because of POST method
 - [ ] popular movies
 - [ ] top movies
+- [ ] make website responsive
 - [ ] create login system
 - [ ] create user DB
 - [ ] user should be able to create accounts
