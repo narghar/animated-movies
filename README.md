@@ -21,7 +21,7 @@
 - [ ] top movies
 - [ ] create login system
 - [ ] create user DB
-- [ ] create user accounts
+- [ ] user should be able to create accounts
 - [ ] create favourites movies function
   - allow user to store their fav movies in their acc
 - [ ] add additional languages to site
