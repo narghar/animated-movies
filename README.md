@@ -2,27 +2,29 @@
 ## Animation movies database
 
 > Website that allows users to search animated videos and get details from the TMDb movie database.
+
 > Right now support only polish language.
+
 > This is my Learn to Code project
 
 ![Screencast](demo.gif)
 
 ## Demo
 
-**[Online](https://baza-bajek.herokuapp.com/)
+**[Online](https://baza-bajek.herokuapp.com/)**
 
 ## TODO List
 
-[] bookmark searches in browser
+- [ ] bookmark searches in browser
    - there is no direct path, because of POST method
-[] popular movies
-[] top movies
-[] create login system
-[] create user DB
-[] create user accounts
-[] create favourites movies function
+- [ ] popular movies
+- [ ] top movies
+- [ ] create login system
+- [ ] create user DB
+- [ ] create user accounts
+- [ ] create favourites movies function
   - allow user to store their fav movies in their acc
-[] add additional languages to site
+- [ ] add additional languages to site
 
 
 ## Technologies and tools used
