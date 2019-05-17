@@ -15,9 +15,8 @@
 
 ## TODO List
 
-- [ ] bookmark searches in browser
-   - there is no direct path, because of POST method
-- [ ] popular movies
+- [x] bookmark searches in browser
+- [ ] popular movies in search bar appears
 - [ ] top movies
 - [ ] make website responsive
 - [ ] create login system
