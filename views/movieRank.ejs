@@ -1,0 +1,16 @@
+<h1 class="movies-category">Ranking TOP</h1>
+<div class="movies">
+  <% movies.result.forEach((movie) =>{%>
+  <figure class="movies__item">
+    <a href="movie/<%= movie.id %>" class="movies__item-link">
+      <img
+        class="movies__poster"
+        src="https://image.tmdb.org/t/p/w342<%= movie.poster_path %>"
+      />
+      <figcaption class="movies__title">
+        <%= movie.title %>
+      </figcaption>
+    </a>
+  </figure>
+  <% });%>
+</div>
