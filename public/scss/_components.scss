@@ -9,6 +9,14 @@
   &:hover {
     transform: scale(0.9);
   }
+
+  @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+    margin-left: .5rem;
+   }
+  @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 ///// SEARCH //////
@@ -18,6 +26,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+      flex: 0 0 100%;
+     }
 
     &__input {
         font-family: inherit;
@@ -29,6 +41,9 @@
         border-radius: 100px;
         margin-right: -3.25rem;
         width: 100%;
+        @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+          width: 95%;
+         }
 
         &:focus {
             outline: none;
@@ -70,17 +85,30 @@
 }
 
 ///// NAVIGATION //////
+.header-bar-nav {
+  @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+    order: -1;
+   }
+}
+
 .header-nav {
   display: flex;
   list-style: none;
   align-items: center;
 
+
   & > * {
     margin-right: 2rem;
+    @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+      margin-right: 1rem;
+    }
   }
 
   &__item {
     position: relative;
+    @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
+     font-size: 1.45rem;
+    }
   }
 
   &__link:link,
@@ -102,12 +130,23 @@
     background-color: var(--color-primary);
     border-radius: 100px;
     padding: .385rem 2rem;
+    @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+      display: none;
+     }
+  }
+
+  &__item--login {
+    display: none;
+    @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+      display: inline;
+     }
   }
 
   &__link--action:link,
   &__link--action:visited {
     color: var(--color-secondary);
     text-decoration: none;
+
   }
 
   &__favicon {
@@ -115,6 +154,21 @@
     height: 3.5rem;
     width: 3.5rem;
     fill: var(--color-heart);
+    @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  &__login {
+    margin-top: 5px;
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: var(--color-primary);
+    @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 
   &__fav-counter {
@@ -128,6 +182,11 @@
     width: 3.5rem;
     height: 3.5rem;
     color: var(--color-secondary);
+
+    @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
+      height: 3rem;
+      width: 3rem;
+    }
   }
 
 }
@@ -173,19 +232,20 @@
   flex: 0 0 100%;
   margin-top: 2rem;
   text-transform: uppercase;
+  @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+    margin-top: 0;
+   }
+
 }
 
 .movies {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   padding: 0 2rem 2rem 2rem;
 
   &__item {
     padding: 2rem;
     display: block;
-    width: 20%;
-    //TODO: phone media query width: 50%;
-
   }
 
   &__item-link:link,
@@ -227,6 +287,20 @@
   height: 50rem;
   display: flex;
   justify-content: center;
+  @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+    height: 60rem;
+   }
+  @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+    height: 80rem;
+  }
+  @media only screen and (orientation:portrait) and (max-width: $bp-smallest) {
+    height: 94rem;
+  }
+  @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
+    height: 115rem;
+  }
+
+
   &__image {
     width: 100%;
     height: 100%;
@@ -245,18 +319,38 @@
   padding: 2rem;
   justify-content: center;
 
+  @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+    display: block;
+  }
 
   &__poster {
     flex: 0 1 30rem;
     padding-right: 2rem;
 
-    //test background-color: black;
+    @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+      display: none;
      }
+  }
 
   &__poster-img {
     max-width:  100%;
     border-radius: 3px;
     box-shadow: var(--shadow);
+  }
+
+  &__poster-small {
+
+    display: none;
+    @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+      float: left;
+      margin: 0 2rem 2rem 0;
+      display: inline;
+     }
+     @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+      float: none;
+      display: inline;
+     }
+
   }
 
   &__content {
@@ -268,6 +362,14 @@
     font-size: 1.8rem;
     opacity: .8;
     margin-bottom: 5.6px;
+
+    @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+      font-size: 1.6rem
+     }
+
+    @media only screen and (orientation:portrait) and (max-width: $bp-small) {
+      text-align: center;
+     }
   }
 
   &__info {

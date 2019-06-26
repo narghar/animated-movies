@@ -36,6 +36,14 @@
   justify-content: space-between;
   z-index: 1000;
 
+  & a {
+    order: -2;
+  }
+  @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+    flex-wrap: wrap;
+    height: auto;
+   }
+
 }
 .video-wrapper {
   position: relative;
