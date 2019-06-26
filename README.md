@@ -17,8 +17,9 @@
 
 - [x] bookmark searches in browser
 - [ ] popular movies in search bar appears
-- [ ] top movies
-- [ ] make website responsive
+- [x] top movies
+  - [ ] add more results and pagination
+- [x] make website responsive
 - [ ] create login system
 - [ ] create user DB
 - [ ] user should be able to create accounts
