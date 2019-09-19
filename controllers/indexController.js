@@ -7,77 +7,34 @@ const Latest = require('../models/indexModel');
 const movies = {};
 let dateObj = new Date();
 let releaseYear = dateObj.getFullYear();
-let releasedTillNow = dateObj.getFullYear() + "-" + (dateObj.getMonth() + 1) + "-" + dateObj.getDate();
 
-const latestMovies = async() => {
+function getMonth(date) { // Get Month in 2 digit format
+  var month = date.getMonth() + 1;
+  return month < 10 ? '0' + month : '' + month;
+}
+
+let releasedTillNow = dateObj.getFullYear() + "-" + getMonth(dateObj) + "-" + dateObj.getDate();
+
+const latestMovies = async () => {
 
   search = new Latest(releaseYear, releasedTillNow);
   try {
     await search.getData();
     movies.result = search.result;
+  } catch (err) {
     // console.log(movies.result);
-    } catch(err) {
-        console.log("Download error");
+    console.log("Download error");
   }
 }
 latestMovies();
 
 
-// async function testWow() {
-//   let query = 16;
-// const movies = new Search(query);
-// try {
-//  await movies.getData();
-//   console.log(movies.result);
-// } catch(err) {
-//   console.log('Blad');
-// }
-// }
-// testWow();
-
-
-// console.log(movies);
-// const movies = [
-//   {
-//     id: 1,
-//     name:  "Spirited Away: W krainie bogów",
-//     image: "https://image.tmdb.org/t/p/w300/oRvMaJOmapypFUcQqpgHMZA6qL9.jpg"
-//   },
-//   {
-//     id: 2,
-//     name:  "Spider-Man Uniwersum",
-//     image: "https://image.tmdb.org/t/p/w300/uWb1OWabm8YSoLp1JGeJl0fF7DT.jpg"
-//   },
-//   {
-//     id: 3,
-//     name:  "Grobowiec świetlików",
-//     image: "https://image.tmdb.org/t/p/w300/a8S5d5w7tzNAgSHDEybOJPwSey4.jpg"
-//   },
-//   {
-//     id: 4,
-//     name:  "Księżniczka Mononoke",
-//     image: "https://image.tmdb.org/t/p/w300/oGZmGO4Q9HhoRXGRNGKduYvtL9h.jpg"
-//   },
-//   {
-//     id: 5,
-//     name:  "Król Lew",
-//     image: "https://image.tmdb.org/t/p/w300/nGArwXth0dOH8AUZuPCyBBJEWoF.jpg"
-//   },
-//   {
-//     id: 6,
-//     name:  "Coco",
-//     image: "https://image.tmdb.org/t/p/w300/eKi8dIrr8voobbaGzDpe8w0PVbC.jpg"
-//   },
-//   {
-//     id: 7,
-//     name:  "Paperman",
-//     image: "https://image.tmdb.org/t/p/w300/3TpMBcAYH4cxCw5WoRacWodMTCG.jpg"
-//   },
-
-// ];
 
 module.exports = {
   getIndexData(req, res) {
-    return res.render('index', { title: 'BAZA BAJEK', movies: movies });
+    return res.render('index', {
+      title: 'BAZA BAJEK',
+      movies: movies
+    });
   },
 };
