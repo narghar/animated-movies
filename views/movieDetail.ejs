@@ -1,7 +1,9 @@
+<script>
+const styleElem = document.head.appendChild(document.createElement("style"));
+styleElem.innerHTML = ".movie-detail-backdrop:before {background-image:url('https://image.tmdb.org/t/p/w1280<%= movie.backdrop %>')}";
+</script>
 
-<div class="movie-detail-backdrop">
-    <img  class="movie-detail-backdrop__image" src="https://image.tmdb.org/t/p/w1280<%= movie.backdrop %>"
-  />
+<div  class="movie-detail-backdrop">
   <div class="movie-detail">
       <div class="movie-detail__poster">
           <img class="movie-detail__poster-img" src="https://image.tmdb.org/t/p/w342<%= movie.poster %>"/>

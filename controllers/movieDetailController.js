@@ -12,7 +12,7 @@ module.exports = {
       let movie = new MovieDetail(movieId);
       try {
         await movie.getData();
-        return res.render('movieDetail', {title: movieId, movie: movie});
+        return res.render('movieDetail', {title: movie.title, movie: movie});
        } catch(err) {
          console.log("Download error");
       }

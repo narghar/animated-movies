@@ -318,36 +318,24 @@ h2 {
     transition: all .5s; }
 
 .movie-detail-backdrop {
-  position: relative;
-  height: 50rem;
   display: flex;
-  justify-content: center; }
-  @media only screen and (orientation: portrait) and (max-width: 50em) {
-    .movie-detail-backdrop {
-      height: 60rem; } }
-  @media only screen and (orientation: portrait) and (max-width: 30em) {
-    .movie-detail-backdrop {
-      height: 80rem; } }
-  @media only screen and (orientation: portrait) and (max-width: 26em) {
-    .movie-detail-backdrop {
-      height: 94rem; } }
-  @media only screen and (orientation: portrait) and (max-width: 22em) {
-    .movie-detail-backdrop {
-      height: 115rem; } }
-  .movie-detail-backdrop__image {
+  justify-content: center;
+  background-size: cover;
+  position: relative; }
+  .movie-detail-backdrop::before {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.5; }
+    background-size: cover;
+    opacity: .5; }
 
 .movie-detail {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   padding: 2rem;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 1; }
   @media only screen and (orientation: portrait) and (max-width: 50em) {
     .movie-detail {
       display: block; } }
@@ -379,11 +367,13 @@ h2 {
     box-shadow: var(--shadow);
     flex: 0 1 60%;
     font-size: 1.8rem;
-    opacity: .8;
-    margin-bottom: 5.6px; }
+    opacity: 100%;
+    margin-bottom: 5.6px;
+    opacity: .85; }
     @media only screen and (orientation: portrait) and (max-width: 50em) {
       .movie-detail__content {
-        font-size: 1.6rem; } }
+        font-size: 1.6rem;
+        opacity: 1; } }
     @media only screen and (orientation: portrait) and (max-width: 30em) {
       .movie-detail__content {
         text-align: center; } }

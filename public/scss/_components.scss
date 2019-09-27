@@ -283,41 +283,28 @@
 
 ///// MOVIE DETAIL //////
 .movie-detail-backdrop {
-  position: relative;
-  height: 50rem;
   display: flex;
   justify-content: center;
-  @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
-    height: 60rem;
-   }
-  @media only screen and (orientation:portrait) and (max-width: $bp-small) {
-    height: 80rem;
-  }
-  @media only screen and (orientation:portrait) and (max-width: $bp-smallest) {
-    height: 94rem;
-  }
-  @media only screen and (orientation:portrait) and (max-width: $bp-minimal) {
-    height: 115rem;
-  }
+  background-size: cover;
+  position: relative;
 
-
-  &__image {
+  &::before {
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-  }
+    background-size: cover;
+    opacity: .5;
+}
 
 }
 
 .movie-detail {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   padding: 2rem;
   justify-content: center;
+  z-index: 1;
 
   @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
     display: block;
@@ -360,11 +347,14 @@
     box-shadow: var(--shadow);
     flex: 0 1 60%;
     font-size: 1.8rem;
-    opacity: .8;
+    opacity: 100%;
     margin-bottom: 5.6px;
+    opacity: .85;
+
 
     @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
-      font-size: 1.6rem
+      font-size: 1.6rem;
+      opacity: 1;
      }
 
     @media only screen and (orientation:portrait) and (max-width: $bp-small) {
