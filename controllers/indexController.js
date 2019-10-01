@@ -12,8 +12,12 @@ function getMonth(date) { // Get Month in 2 digit format
   var month = date.getMonth() + 1;
   return month < 10 ? '0' + month : '' + month;
 }
+function getDay(date) { // Get Day in 2 digit format
+  var day = date.getDate();
+  return day < 10 ? '0' + day : '' + day;
+}
 
-let releasedTillNow = dateObj.getFullYear() + "-" + getMonth(dateObj) + "-" + dateObj.getDate();
+let releasedTillNow = dateObj.getFullYear() + "-" + getMonth(dateObj) + "-" + getDay(dateObj);
 
 const latestMovies = async () => {
 
