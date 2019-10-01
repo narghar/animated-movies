@@ -13,6 +13,24 @@
 
 **[Online](https://baza-bajek.herokuapp.com/)**
 
+## Installation
+1. Create account on: https://www.themoviedb.org
+2. Get your TMDB API KEY: https://developers.themoviedb.org/3/getting-started/introduction
+3. Clone or download the repo.
+4. Create folder `config`
+5. Create file `data.js` inside `config` folder.
+6. Open file `data.js` and add the following code:
+```
+module.exports = {
+  key: 'YOUR_TMDB_API_KEY',
+}
+```
+7. Assuming that you have at least [Node 10 LTS](https://nodejs.org/en/) installed, use npm to install:
+`npm install`
+8. Once the installation is done, you can run the project:
+`npm start`
+9. Open http://localhost:3000 to view in the browser/
+
 ## TODO List
 
 - [x] bookmark searches in browser
