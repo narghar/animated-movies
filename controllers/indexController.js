@@ -1,27 +1,31 @@
 // Controller for all root / routes
-const Latest = require('../models/indexModel');
-
-
+const Latest = require("../models/indexModel");
 
 //SEARCH FOR NEW MOVIES
 const movies = {};
 let dateObj = new Date();
-let releaseYear = dateObj.getFullYear();
+let releaseYear = dateObj
+  .getFullYear()
+  .toString()
+  .slice(-2);
 
-function getMonth(date) { // Get Month in 2 digit format
+function getMonth(date) {
+  // Get Month in 2 digit format
   var month = date.getMonth() + 1;
-  return month < 10 ? '0' + month : '' + month;
-}
-function getDay(date) { // Get Day in 2 digit format
-  var day = date.getDate();
-  return day < 10 ? '0' + day : '' + day;
+  return month < 10 ? "0" + month : "" + month;
 }
 
-let releasedTillNow = dateObj.getFullYear() + "-" + getMonth(dateObj) + "-" + getDay(dateObj);
+function getDay(date) {
+  // Get Day in 2 digit format
+  var day = date.getDate();
+  return day < 10 ? "0" + day : "" + day;
+}
+
+let releasedTillNow =
+  dateObj.getFullYear() + "-" + getMonth(dateObj) + "-" + getDay(dateObj);
 
 const latestMovies = async () => {
-
-  search = new Latest(releaseYear, releasedTillNow);
+  let search = new Latest(releaseYear, releasedTillNow);
   try {
     await search.getData();
     movies.result = search.result;
@@ -29,16 +33,14 @@ const latestMovies = async () => {
     // console.log(movies.result);
     console.log("Download error");
   }
-}
+};
 latestMovies();
-
-
 
 module.exports = {
   getIndexData(req, res) {
-    return res.render('index', {
-      title: 'BAZA BAJEK',
+    return res.render("index", {
+      title: "BAZA BAJEK",
       movies: movies
     });
-  },
+  }
 };
