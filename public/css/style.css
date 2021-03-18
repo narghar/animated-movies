@@ -388,7 +388,11 @@ h2 {
 .not-found {
   display: flex;
   font-size: 1.8rem;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem 1rem 3rem; }
+  .not-found div img {
+    width: 100%; }
 
 .copyright {
   color: var(--color-secondary); }

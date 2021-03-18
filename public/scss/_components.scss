@@ -379,6 +379,16 @@
   display: flex;
   font-size: 1.8rem;
   justify-content: center;
+  align-items: center;
+  margin: 1rem 2rem 1rem 3rem;
+
+
+  & div img {
+    width: 100%;
+    @media only screen and (orientation:portrait) and (max-width: $bp-medium) {
+
+    }
+  }
 
 }
 
