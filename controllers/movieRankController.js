@@ -10,7 +10,6 @@ module.exports = {
 
       try {
         await search.getData();
-        console.log(search.totalPages);
         return res.render('movieRank', {
         title: 'BAZA BAJEK',
         movies: search,

@@ -6,8 +6,7 @@ const movies = {};
 let dateObj = new Date();
 let releaseYear = dateObj
   .getFullYear()
-  .toString()
-  .slice(-2);
+  .toString();
 
 function getMonth(date) {
   // Get Month in 2 digit format
@@ -30,7 +29,6 @@ const latestMovies = async () => {
     await search.getData();
     movies.result = search.result;
   } catch (err) {
-    // console.log(movies.result);
     console.log("Download error");
   }
 };
